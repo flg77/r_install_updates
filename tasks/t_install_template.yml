@@ -1,0 +1,9 @@
+---
+- block:
+  - name: Install bit
+    yum:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+    -
+    when: ansible_distribution == "RedHat" or ansible_distribution == "CentOs"  
