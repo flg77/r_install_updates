@@ -1,0 +1,12 @@
+---
+# Playbook exec  site yaml
+#
+#
+##
+# ALL Hosts Config
+
+  - hosts: all
+    become: yes
+    become_user: root
+    roles:
+    - { role: r_install_updates }

@@ -1,0 +1,7 @@
+---
+- block:
+  - name: Install updates for installed packages
+    yum:
+      name: "*"
+      state: latest
+    when: ansible_distribution == "RedHat" or ansible_distribution == "CentOs"  
